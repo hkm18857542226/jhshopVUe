@@ -10,7 +10,7 @@ import * as log from './modules/log'
 import * as loginlog from './modules/loginlog'
 import * as mainstatistics from "./modules/man/maistatistics"
 import * as plugin from './modules/pay/plugin'
-
+import * as userMem from './modules/user/user'
 //默认全部导出
 export default {
 	login,
@@ -24,4 +24,5 @@ export default {
   loginlog,
   plugin,
   mainstatistics,
+  userMem
 }

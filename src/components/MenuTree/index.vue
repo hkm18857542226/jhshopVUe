@@ -44,7 +44,22 @@
 
         // Vue.set(Vue.prototype.hkm,menu)
         // Vue.set( Vue.prototype.hkm,'hkm',menu)
-        this.$router.push("/" + menu.url)
+
+        //原来的语句
+        // this.$router.push("/" + menu.url)
+
+        this.$api.menu.role({userName:sessionStorage.getItem("user"),url:menu.url}).then((data)=>{
+          console.log(data)
+        if(data.url === '/'){
+          // 验证失败去到 主页中
+          this.$router.push("/main/mainUI" )
+          return
+        }
+
+          this.$router.push("/" + data.url)
+
+        })
+
 			}
 		}
 	}

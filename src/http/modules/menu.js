@@ -35,3 +35,20 @@ export const findMenuTree = () => {
         method: 'get'
     })
 }
+
+
+
+// /
+// 新增的方法
+/**
+ * 权限
+ * @param data
+ */
+export const role = (data)=>{
+  return axios({
+    url:'http://localhost:8080/role',
+    method:"post",
+    data
+  })
+}
+
